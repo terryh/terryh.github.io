@@ -1,0 +1,12 @@
++++
+title = "django-pipeline"
+date = 2011-12-31T21:14:00Z
+updated = 2011-12-31T21:21:59Z
+tags = ["Python", "Django"]
+blogimport = true 
+[author]
+	name = "TerryH"
+	uri = "https://www.blogger.com/profile/00198432946574471177"
++++
+
+一個簡單，好用的 django plugin<br /><br /><br /><a href="https://github.com/cyberdelia/django-pipeline">https://github.com/cyberdelia/django-pipeline</a> <br /><br />用途，用來產生，壓縮處理， css ，javascript 或是圖片，也可以自動處理 version (也有支援 git 喔) 可以搭配的工具很多，SAAS，LESS，或是 Coffee Script 都 OK，有沒有開始傻笑了 ;-) <br /><br /><br /><span style="font-size: x-large;">Compressors</span><br /><br />YUI Compressor compressor (這個是預設的)<br /><br />Closure Compiler compressor<br /><br />UglifyJS compressor<br /><br />JSMin compressor<br /><br />CSSTidy compressor<br /><br />Write your own compressor class<br /><br /><span style="font-size: x-large;">Compilers</span><br /><br />Coffee Script compiler<br /><br />LESS compiler<br /><br />SASS compiler<br /><br />Stylus compiler<br /><br />Write your own compiler class<br /><br /><br />拜託，要用時，還是看一下文件，及 source code<br /><br />&nbsp;文件 <a href="http://django-pipeline.readthedocs.org/en/latest/index.html">http://django-pipeline.readthedocs.org/en/latest/index.html</a><br /><br />&nbsp;EXAMPLE: 我先假設，用的是<br /><br />Django 1.3.1<br />settings.py INSTALLED_APPS  有 'django.contrib.staticfiles'，把 'pipeline'，也加到 INSTALLED_APPS 裡  <br /><br />yuicompressor-2.4.7.jar 我放到 project 資料夾的 pkgs 目錄下面<br /><br />在 Debian 上面有安裝&nbsp;openjdk-7-jdk<br /><br />PIPELINE_JS 的部份，依此類推  <br /><br />settings.py 部份 <br /><pre>PROJECT_ROOT = BASE_DIR = os.path.abspath(os.path.dirname(__file__))<br /><br />INSTALLED_APPS = (<br />                  'pipeline', # 這個要有，當然還有其他你要的<br />)<br /><br /># django-pipeline <br />PIPELINE_YUI_BINARY = 'java -jar ' + os.path.join(PROJECT_ROOT, 'pkgs/yuicompressor-2.4.7.jar')<br />PIPELINE_VERSION = True<br />PIPELINE_CSS = {<br />    'main': {<br />        'source_filenames': (<br />          'css/style.css', # 後面可以加很多<br />        ),<br />        'output_filename': 'css/pipeline_r?.css',<br />        'extra_context': {<br />            'media': 'screen,projection',<br />        },<br />    },<br />    # other CSS groups goes here<br />}<br /><br /></pre>我的 base.html 裡的部份 <br /><pre>......<br />{% load compressed %}<br />......<br />.....<br />{% compressed_css 'main' %}<br />.....<br />...<br />..<br /></pre> <br /> 覺的不合用，看更多 Django asset-managers  <br /><a href="http://djangopackages.com/grids/g/asset-managers/">http://djangopackages.com/grids/g/asset-managers/</a>

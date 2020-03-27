@@ -1,0 +1,2 @@
+#!/bin/bash
+hugo && rsync -avz --delete public/ terry@terryh:/usr/src/app/api/blog/

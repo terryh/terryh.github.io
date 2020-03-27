@@ -1,0 +1,23 @@
+<footer class="footer">
+  <div class="footer__inner">
+      <div class="copyright">
+        <span>© {{ now.Year }} TerryH</span>
+
+        {{ if isset .Site.Params "twitterusername" }}
+        <span><a href="https://twitter.com/{{ .Site.Params.twitterusername }}">Twitter</a></span>
+        {{- end }}
+
+        {{ if isset .Site.Params "githubusername" }}
+        <span>&nbsp;<a href="http://github.com/{{ .Site.Params.githubusername }}">GitHub</a></span>
+        {{- end }}
+
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="{{ "assets/main.js" | absURL }}"></script>
+<script src="{{ "assets/prism.js" | absURL }}"></script>
+
+<!-- Extended footer section-->
+{{ partial "extended_footer.html" . }}

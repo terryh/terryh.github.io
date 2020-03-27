@@ -1,0 +1,16 @@
+.*
+!.jshintrc
+!.babelrc
+!.editorconfig
+!.eslintignore
+!.eslintrc.js
+!.gitignore
+!.data
+node_modules
+dist
+public
+themes
+plugins
+*.pyc
+tmp
+.DS_Store

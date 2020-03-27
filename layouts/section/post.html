@@ -1,0 +1,17 @@
+{{ define "main" }}
+      <article>
+        {{ range (where .Data.Pages "Type" "post").GroupByDate "2006/01" -}}
+        <section>
+          <h2>{{ .Key }}</h2>
+          <ol>
+            {{ range .Pages -}}
+            <li>
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </li>
+            {{ end }}
+          </ol>
+        </section>
+        {{ end }}
+
+      </article>
+{{ end }}

@@ -1,0 +1,75 @@
+
+# theme = "paperback"
+baseURL = "https://blog.lifetaiwan.net/"
+languageCode = "zh-Hant-TW"
+title = "台灣 TAIWAN"
+hasCJKLanguage = true
+googleAnalytics = "UA-113871236-1"
+disqusShortname = "lifetaiwan"
+
+theme = "terminal"
+BaseURL = "/"
+baseurl = "/"
+relativeURLs=true
+paginate = 10 
+
+# [outputs]
+  # home = ["HTML", "RSS", "JSON"]
+  # section = ["HTML", "RSS", "JSON"]
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true
+
+[Params]
+    # paperback
+    AuthorName = "TerryH"
+    # Tagline = "留下來，兩岸戰爭，做準備"
+    Description = "台灣，工作，生活，新聞，開發"
+    GithubUsername = "terryh"
+    TwitterUsername = "lifeterry"
+
+    # terminal 
+    themeColor = "orange"
+    contentTypeName = "post"
+    fullWidthTheme = false
+    centerTheme = true
+    showMenuItems = 5 
+    
+    Subtitle = "台灣，工作，生活，新聞，開發"
+    ReadMore = "Read more"
+
+[languages]
+  [languages.en]
+    # title = "Terminal"
+    # subtitle = "A simple, retro theme for Hugo"
+    # keywords = ""
+    # copyright = ""
+    # menuMore = "Show more"
+    # readMore = "Read more"
+    # readOtherPosts = "Read other posts"
+
+    [languages.en.params.logo]
+      logoText = "台灣 TAIWAN"
+      logoHomeLink = "/"
+
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "home"
+        name = "Home"
+        url = "/"
+      [[languages.en.menu.main]]
+        identifier = "tags"
+        name = "Tags"
+        url = "/tags/"
+      [[languages.en.menu.main]]
+        identifier = "post"
+        name = "Posts"
+        url = "/post/"
+
+
+
+# Home Tags All Posts Twitter GitHub
+
+[permalinks]
+  post = "/:year/:month/:title.html"

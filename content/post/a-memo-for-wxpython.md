@@ -1,0 +1,12 @@
++++
+title = "A Memo for wxPython"
+date = 2007-11-06T20:21:00Z
+updated = 2007-11-11T22:39:39Z
+tags = ["Debian", "wxPython", "Python"]
+blogimport = true 
+[author]
+	name = "TerryH"
+	uri = "https://www.blogger.com/profile/00198432946574471177"
++++
+
+這是作給自己看的筆記，怕以後自己都忘了，主要說明一個 windos 庫存軟體的開發我所用的工具<br /><br />要注意的事，都是安裝 win32 的套件包<br /><span style="font-size:130%;"><br />基本套件</span><br /><span style="font-size:130%;"><br />Python2.5</span> <a href="http://www.python.org/">http://www.python.org/</a><br /><br /><span style="font-size:130%;">wxPython</span> <a href="http://wxpython.org/">http://wxpython.org/</a><br /><span style="font-size:130%;"><br />wxGlade  <span style="font-size:100%;"><a href="http://wxglade.sourceforge.net/">http://wxglade.sourceforge.net/</a> 可以快速拖拉的方式產生視窗程式碼</span><br />PIL</span> <a href="http://www.pythonware.com/products/pil/">http://www.pythonware.com/products/pil/</a><br /><br /><span style="font-size:130%;">Django</span> <a href="http://www.djangoproject.com/">http://www.djangoproject.com/</a> ，拜託不要K我，我在 windows 裡也是用他的 ORM，除了，幾乎所有的 SQL 都可以作，如果嫌套件太大，可以把 locales 的目錄去掉，就很小了<br /><span style="font-size:130%;"><br />IPython</span> <a href="http://ipython.scipy.org/moin/">http://ipython.scipy.org/moin/</a> ，必須加裝 pyreadline <a href="http://ipython.scipy.org/dist/">http://ipython.scipy.org/dist/</a> 這種 shell 方式的測試開發，算是特別的福利喔，好好珍惜，很好用的<br /><span style="font-size:130%;">pywin32</span> <a href="http://sourceforge.net/projects/pywin32/">http://sourceforge.net/projects/pywin32/</a> ，可以用 COM 的方式來控制元件<br /><span style="font-size:130%;"><br />ReportLab</span> <a href="http://www.reportlab.org/">http://www.reportlab.org/</a>  ，可以用PDF來處理列印<br /><div style="text-align: left;">reportlab 在 windows 下有一個很久沒有修的 bug，maillist 上也有人說，就是沒修正，記得  /reportlab/pdfbase/_cidfontdata.py line 137<br /></div><br />'MSung-Light': ('cht', 'UniGB-UCS2-H')<br />改成<br />'MSung-Light': ('cht', 'UniCNS-UCS2-H')<br /><br /><span style="font-size:130%;">生成安裝包</span><br /><span style="font-size:130%;"><br />py2exe</span> <a href="http://www.py2exe.org/">http://www.py2exe.org/</a> 生成執行程式，0.6.6版有一點怪怪的 bug，也許是 windows 系統的問題，記得發行套件加入 MSVCP71.dll <a href="http://www.dll-files.com/dllindex/dll-files.shtml?msvcp71">http://www.dll-files.com/dllindex/dll-files.shtml?msvcp71</a><br /><span style="font-size:130%;"><br />NSIS</span> <a href="http://nsis.sourceforge.net/">http://nsis.sourceforge.net/</a> ，可以用來作安裝包，好用<br /><br /><br /><span style="font-family:monospace;"><br /></span>
