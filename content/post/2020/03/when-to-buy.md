@@ -1,7 +1,7 @@
 +++
 title = "When to Buy"
 date = 2020-03-20T09:26:48+08:00
-draft = true
+draft = false
 tags = ["新聞", "財經"]
 +++
 
@@ -38,7 +38,22 @@ tags = ["新聞", "財經"]
 
 <!--more-->
 
+一般來說，都會是一個難得一個的進場點，我比較喜歡用融資餘額的變化來觀察，看到歷史低點後，
+，可以開始佈局了，因為他本身算是一個蠻落後的指標，所以非常適合慢郎中
+或是不太在意小幅，上下百分之7內震盪的投資人
 
+這個是 goodinfo 的圖表連結，有興趣的人可以去看看，我自己用這樣的方式
+
+天
+
+https://goodinfo.tw/StockInfo/ShowBearishChart.asp?STOCK_ID=%E5%8A%A0%E6%AC%8A%E6%8C%87%E6%95%B8&CHT_CAT=DATE
+
+周 (長期一點)
+
+https://goodinfo.tw/StockInfo/ShowBearishChart.asp?STOCK_ID=%E5%8A%A0%E6%AC%8A%E6%8C%87%E6%95%B8&CHT_CAT=WEEK
+
+
+覺得還蠻有參考性的
 
 參考資訊
 
